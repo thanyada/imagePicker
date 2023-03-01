@@ -7,7 +7,7 @@ buildscript {
 
         targetJavaVersion = JavaVersion.VERSION_1_8
 
-        versionName = '1.4'
+        versionName = '1.5'
         versionCode = 1
 
         libraryName = 'imagePicker'
