@@ -7,6 +7,15 @@ plugins {
     id 'kotlin-kapt'
 }
 
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication) {
+//            groupId = 'com.thanyada'
+//            artifactId = 'imagePicker'
+//            version = '1.4'
+//        }
+//    }
+//}
 android {
     compileSdkVersion project.compileSdkVersion
 
@@ -39,6 +48,16 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                }
+            }
+        }
     }
 
 }
