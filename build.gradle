@@ -1,9 +1,54 @@
+buildscript {
+    project.ext {
+        kotlin_version = '1.6.10'
+        compileSdkVersion = 33
+        targetSdkVersion = 33
+        minSdkVersion = 14
 
-plugins {
-    id 'com.android.application' version '7.1.2' apply false
-    id 'com.android.library' version '7.1.2' apply false
-    id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
+        targetJavaVersion = JavaVersion.VERSION_1_8
+
+        versionName = '1.3'
+        versionCode = 1
+
+        libraryName = 'imagePicker'
+        libraryDescription = 'Pick image from Gallery or Capture new image with Camera.'
+
+        groupId = 'com.thanyada'
+        artifactId = 'imagePicker'
+
+        siteUrl = 'https://github.com/thanyada/imagePicker'
+        gitUrl = 'https://github.com/thanyada/imagePicker.git'
+
+        developerId = 'thanyada'
+        developerName = 'Thanyada Chodanon'
+        developerEmail = 'thanyada.c@proxumer.com'
+
+        licenseName = 'The Apache License, Version 2.0'
+        licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    }
+
+    repositories {
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$project.kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.17"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.33-beta"
+    }
 }
+
+
+//plugins {
+//    id 'com.android.application' version '7.1.2' apply false
+//    id 'com.android.library' version '7.1.2' apply false
+//    id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
+//}
+
+
+
 
 allprojects {
     repositories {
