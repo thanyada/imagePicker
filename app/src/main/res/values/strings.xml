@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">ImagePicker</string>
+    <string name="image_picker_action_ok">OK</string>
+    <string name="image_picker_action_done">DONE</string>
+    <string name="image_picker_action_cancel">CANCEL</string>
+
+    <string name="image_picker_title_folder">Albums</string>
+    <string name="image_picker_title_image">Photos</string>
+
+    <string name="image_picker_text_gif">GIF</string>
+
+    <string name="image_picker_error_no_camera">No camera found.</string>
+    <string name="image_picker_error_open_camera">Could not open camera.</string>
+
+    <string name="image_picker_msg_no_images">No image available.</string>
+    <string name="image_picker_msg_no_external_storage_permission">Please allow permission to access photos and media.</string>
+    <string name="image_picker_msg_limit_images">You can select up to %d images.</string>
+
+    <string name="ic_rotate_left_24">Rotate counter clockwise</string>
+    <string name="ic_rotate_right_24">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="ic_flip_24">Flip</string>
+    <string name="ic_flip_24_horizontally">Flip horizontally</string>
+    <string name="ic_flip_24_vertically">Flip vertically</string>
+    <string name="pick_image_chooser_title">Select source</string>
+</resources>

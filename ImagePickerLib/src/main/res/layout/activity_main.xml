@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/MoreImagesShowCameraButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="multiple image | camera" />
+
+        <Button
+            android:id="@+id/MoreImagesHideCameraButton"
+            app:layout_constraintTop_toBottomOf="@id/MoreImagesShowCameraButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="only multiple image" />
+
+        <Button
+            android:id="@+id/OneImageShowCameraButton"
+            app:layout_constraintTop_toBottomOf="@id/MoreImagesHideCameraButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="single image | camera" />
+
+        <Button
+            android:id="@+id/OneImageWithCameraAndCropButton"
+            app:layout_constraintTop_toBottomOf="@id/OneImageShowCameraButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="single image | crop" />
+
+
+        <Button
+            android:id="@+id/OnlyCameraBackButton"
+            app:layout_constraintTop_toBottomOf="@id/OneImageWithCameraAndCropButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Common BACK | single image" />
+
+        <Button
+            android:id="@+id/OnlyCameraFrontButton"
+            app:layout_constraintTop_toBottomOf="@id/OnlyCameraBackButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Common Front" />
+
+        <Button
+            android:id="@+id/OnlyCameraCitizenCardButton"
+            app:layout_constraintTop_toBottomOf="@id/OnlyCameraFrontButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Citizen Card" />
+
+        <Button
+            android:id="@+id/OnlyCameraCitizenCardWithOwnerButton"
+            app:layout_constraintTop_toBottomOf="@id/OnlyCameraCitizenCardButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Citizen Card With Owner" />
+
+
+        <GridView
+            android:id="@+id/gridView"
+            app:layout_constraintTop_toBottomOf="@id/OnlyCameraCitizenCardWithOwnerButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:numColumns="3"
+            android:verticalSpacing="4dp"
+            android:horizontalSpacing="4dp"
+            android:stretchMode="columnWidth"
+            android:background="#FFEB3B"
+            android:gravity="center">
+        </GridView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/imagePreviewRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:background="#EDEDED">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagePreviewImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imagePreviewCloseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:tint="@color/black"
+            android:src="@drawable/ic_arrow_back_24"/>
+
+
+    </RelativeLayout>
+</FrameLayout>
