@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = project.targetJavaVersion.toString()
+        freeCompilerArgs += [
+                "-Xjvm-default=all",
+        ]
     }
 
     buildFeatures {
@@ -44,6 +47,8 @@ task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
     outputFormat = 'javadoc'
     outputDirectory = "$buildDir/documentation"
 }
+
+
 
 dependencies {
 
